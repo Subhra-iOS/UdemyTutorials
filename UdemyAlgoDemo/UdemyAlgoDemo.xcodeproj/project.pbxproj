@@ -14,6 +14,8 @@
 		2A61E3C124F1480D005F9CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A61E3C024F1480D005F9CBD /* Assets.xcassets */; };
 		2A61E3C424F1480D005F9CBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A61E3C224F1480D005F9CBD /* LaunchScreen.storyboard */; };
 		2A61E3CF24F1480D005F9CBD /* UdemyAlgoDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E3CE24F1480D005F9CBD /* UdemyAlgoDemoTests.swift */; };
+		2A61E3DA24F15403005F9CBD /* ViewController+BigONotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E3D924F15403005F9CBD /* ViewController+BigONotation.swift */; };
+		2A61E3DC24F17B70005F9CBD /* ViewController+Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E3DB24F17B70005F9CBD /* ViewController+Recursion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		2A61E3CA24F1480D005F9CBD /* UdemyAlgoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UdemyAlgoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A61E3CE24F1480D005F9CBD /* UdemyAlgoDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdemyAlgoDemoTests.swift; sourceTree = "<group>"; };
 		2A61E3D024F1480D005F9CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A61E3D924F15403005F9CBD /* ViewController+BigONotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+BigONotation.swift"; sourceTree = "<group>"; };
+		2A61E3DB24F17B70005F9CBD /* ViewController+Recursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Recursion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				2A61E3B724F1480A005F9CBD /* AppDelegate.swift */,
 				2A61E3B924F1480A005F9CBD /* SceneDelegate.swift */,
 				2A61E3BB24F1480A005F9CBD /* ViewController.swift */,
+				2A61E3D924F15403005F9CBD /* ViewController+BigONotation.swift */,
+				2A61E3DB24F17B70005F9CBD /* ViewController+Recursion.swift */,
 				2A61E3BD24F1480A005F9CBD /* Main.storyboard */,
 				2A61E3C024F1480D005F9CBD /* Assets.xcassets */,
 				2A61E3C224F1480D005F9CBD /* LaunchScreen.storyboard */,
@@ -201,6 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A61E3BC24F1480A005F9CBD /* ViewController.swift in Sources */,
+				2A61E3DC24F17B70005F9CBD /* ViewController+Recursion.swift in Sources */,
+				2A61E3DA24F15403005F9CBD /* ViewController+BigONotation.swift in Sources */,
 				2A61E3B824F1480A005F9CBD /* AppDelegate.swift in Sources */,
 				2A61E3BA24F1480A005F9CBD /* SceneDelegate.swift in Sources */,
 			);
