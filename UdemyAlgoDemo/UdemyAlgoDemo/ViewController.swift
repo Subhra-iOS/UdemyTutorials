@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         let sum = self.findSumOfElementUpto(element: item)
          print("Sum value of \(item) is \(sum)")
         
+        let pairIndex = self.matchPairFor(target: 4, array: [1, 2, 2, 3, 4])
+        
+        print("\(pairIndex)")
+        
     }
     
     private func resursionCheck(){
