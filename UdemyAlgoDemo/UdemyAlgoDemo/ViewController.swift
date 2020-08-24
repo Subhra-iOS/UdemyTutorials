@@ -29,6 +29,13 @@ class ViewController: UIViewController {
         
         print("\(pairIndex)")
         
+        let outputArray = self.equilibriumIndexFor(array: [-3, 2, -2, 1, -2])
+        print("Equilibrium index: \(String(describing: outputArray))")
+        
+        let intPair: Pair = Pair<Int, Int>(firstObj: 5, secondObj: 10)
+        let strPair: Pair = Pair<String, String>(firstObj: "Subhra", secondObj: "Roy")
+        let comPair: Pair = Pair<Int, String>(firstObj: 10, secondObj: "Test")
+        
     }
     
     private func resursionCheck(){
@@ -41,3 +48,7 @@ class ViewController: UIViewController {
 
 }
 
+struct Pair<T1, T2>{
+    var firstObj: T1
+    var secondObj: T2
+}

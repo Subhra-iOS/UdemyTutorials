@@ -31,5 +31,20 @@ extension ViewController {
         return result
     }
     
+    func equilibriumIndexFor(array: [Int]) -> [Int]?{
+        
+        var indices: [Int] = [Int]()
+        var sum: Int = array.reduce(0, +)
+        var leftSum = 0
+        for i in 0 ..< array.count{
+            sum = sum - array[i]
+            if leftSum == sum{
+                indices.append(i)
+            }
+            leftSum = leftSum + array[i]
+        }
+        
+        return indices.isEmpty ? nil : indices
+    }
     
 }
