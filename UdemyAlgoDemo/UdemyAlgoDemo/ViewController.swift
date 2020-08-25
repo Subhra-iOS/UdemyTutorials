@@ -36,6 +36,13 @@ class ViewController: UIViewController {
         let strPair: Pair = Pair<String, String>(firstObj: "Subhra", secondObj: "Roy")
         let comPair: Pair = Pair<Int, String>(firstObj: 10, secondObj: "Test")
         
+        print("\(intPair) || \(strPair) || \(comPair)")
+        
+        let set = Set<SimpleStruct>()
+        print("\(set)")
+        
+        
+        let dictionary: Dictionary<AnyHashable, Any> = Dictionary<AnyHashable, Any>() // a heterogeneous dictionary, where key value is conform  to Hashable protocol
     }
     
     private func resursionCheck(){
@@ -51,4 +58,21 @@ class ViewController: UIViewController {
 struct Pair<T1, T2>{
     var firstObj: T1
     var secondObj: T2
+}
+
+//Safe index operator
+extension Array{
+    
+    subscript(safe index: Index) -> Element?{
+        return indices.contains(index) ? self[index] : nil
+    }
+    
+}
+
+struct SimpleStruct: Hashable {
+    var indentifier: String
+    
+    public static func ==(lhs: SimpleStruct, rhs: SimpleStruct) -> Bool{
+        return lhs.indentifier == rhs.indentifier
+    }
 }
