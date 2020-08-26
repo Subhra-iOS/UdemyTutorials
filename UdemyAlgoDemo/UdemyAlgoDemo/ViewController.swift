@@ -41,8 +41,13 @@ class ViewController: UIViewController {
         let set = Set<SimpleStruct>()
         print("\(set)")
         
-        
         let dictionary: Dictionary<AnyHashable, Any> = Dictionary<AnyHashable, Any>() // a heterogeneous dictionary, where key value is conform  to Hashable protocol
+        print("\(dictionary)")
+        
+        print("Selection Sort: \(self.selectionSortOn(array: [1, 4, 3, 2]))")
+        print("Insertion Sort: \(self.selectionSortOn(array: [1, 4, 3, 2]))")
+        print("Bubble Sort: \(self.bubbleSortOn(array: [1, 4, 3, 2]))")
+        
     }
     
     private func resursionCheck(){
