@@ -47,6 +47,11 @@ class ViewController: UIViewController {
         print("Selection Sort: \(self.selectionSortOn(array: [1, 4, 3, 2]))")
         print("Insertion Sort: \(self.selectionSortOn(array: [1, 4, 3, 2]))")
         print("Bubble Sort: \(self.bubbleSortOn(array: [1, 4, 3, 2]))")
+        print("Merge Sort: \(self.mergeSortOn(array: [0,9,6,3,2,1,3]))")
+         print("Quick Sort: \(self.quickSortOn(array: [0,9,6,3,2,1,3]))")
+        
+        let payload: Payload = Payload(payloadStr: Base64Encode(newValue: "Test your code"))
+        print("\(payload.payloadStr)")
         
     }
     
@@ -81,3 +86,5 @@ struct SimpleStruct: Hashable {
         return lhs.indentifier == rhs.indentifier
     }
 }
+
+

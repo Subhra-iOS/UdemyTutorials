@@ -77,4 +77,61 @@ extension ViewController{
         return temArray
     }
     
+    func mergeSortOn(array: [Int]) -> [Int]{
+        
+        guard array.count > 1 else { return array }
+        
+        let midPoint = array.count / 2
+        let leftArray = mergeSortOn(array: Array(array[0 ..< midPoint]))
+        let rightArray = mergeSortOn(array: Array(array[midPoint ..< array.count]))
+        
+        return merge(left: leftArray, right: rightArray)
+    }
+    
+    private func merge(left: [Int], right: [Int]) -> [Int]{
+        
+        var sortArray: [Int] = [Int]()
+        var leftIndex = 0
+        var rightIndex = 0
+        
+        while leftIndex < left.count && rightIndex < right.count {
+            
+            if left[leftIndex] < right[rightIndex]{
+                sortArray.append(left[leftIndex])
+                leftIndex = leftIndex + 1
+            }else if left[leftIndex] > right[rightIndex]{
+                sortArray.append(right[rightIndex])
+                rightIndex = rightIndex + 1
+            }else{
+                sortArray.append(left[leftIndex])
+                leftIndex = leftIndex + 1
+                sortArray.append(right[rightIndex])
+                rightIndex = rightIndex + 1
+            }
+            
+        }
+        
+        if leftIndex < left.count {
+            sortArray.append(contentsOf: left[leftIndex ..< left.count])
+        }else if rightIndex < right.count{
+            sortArray.append(contentsOf: right[rightIndex ..< right.count])
+        }
+        
+        return sortArray
+    }
+    
+    func quickSortOn(array: [Int]) -> [Int]{
+        
+        guard array.count > 1 else { return array }
+        let pivot = array.count / 2
+        
+        let pivotElement = array[pivot]
+        let leftElements  = array.filter{ $0 < pivotElement}
+        let pivotArray = array.filter{ $0 == pivotElement }
+        let rightElements  = array.filter{ $0 > pivotElement}
+        
+        return quickSortOn(array: leftElements) + pivotArray + quickSortOn(array: rightElements)
+        
+    }
+    
 }
