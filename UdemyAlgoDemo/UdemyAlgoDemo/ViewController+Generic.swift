@@ -22,6 +22,40 @@ extension ViewController{
         return inputArray.joined(separator: ", ")
         
     }
+    
+    func invertStarTriangleOf(number: Int) -> Void{
+        
+        var i = number
+        while i > 0 {
+            var space: String = " "
+            var star: String = ""
+           
+            space = space + String(repeating: " ", count: (number - i))
+            star = space + star + String(repeating: "*", count: (2*i - 1))
+           
+            print("\(space)" + "\(star)")
+            i = i - 1
+        }
+        
+    }
+    
+    func starTriangleOf(number: Int) -> Void{
+        
+        var i = 0
+        while i < number {
+            var space: String = " "
+            var star: String = ""
+           
+            space = space + String(repeating: " ", count: (number - i))
+            star = space + star + String(repeating: "*", count: (2*i + 1))
+           
+            print("\(space)" + "\(star)")
+            i = i + 1
+        }
+        
+    }
+    
+    
 }
 
 struct ArrayStack<Element> {
