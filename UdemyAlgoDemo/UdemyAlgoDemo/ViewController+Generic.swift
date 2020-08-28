@@ -31,9 +31,9 @@ extension ViewController{
             var star: String = ""
            
             space = space + String(repeating: " ", count: (number - i))
-            star = space + star + String(repeating: "*", count: (2*i - 1))
+            star = space  + String(repeating: "*", count: (2*i - 1))
            
-            print("\(space)" + "\(star)")
+            print("\(star)")
             i = i - 1
         }
         
@@ -47,9 +47,9 @@ extension ViewController{
             var star: String = ""
            
             space = space + String(repeating: " ", count: (number - i))
-            star = space + star + String(repeating: "*", count: (2*i + 1))
+            star = space  + String(repeating: "*", count: (2*i + 1))
            
-            print("\(space)" + "\(star)")
+            print("\(star)")
             i = i + 1
         }
         
