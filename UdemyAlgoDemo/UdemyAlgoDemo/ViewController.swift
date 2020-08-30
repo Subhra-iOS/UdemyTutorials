@@ -78,6 +78,9 @@ class ViewController: UIViewController {
         
         if self.isPalindrom(value: "121212121") { print("Palindrom")}
         else{ print("Not a Palindrom")}
+        
+        print("\(String(describing: self.getFibonnaciSeriesOf(number: 10).series))")
+        print("\(String(describing: self.getFibonnaciSeriesOf(number: 10).last))")
     }
     
     private func resursionCheck(){

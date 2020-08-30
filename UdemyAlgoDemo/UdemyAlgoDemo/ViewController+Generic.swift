@@ -84,6 +84,15 @@ extension ViewController{
         return true
     }
     
+    func getFibonnaciSeriesOf(number: Int) -> (series: [Int]?, last: Int?) {
+        guard number > 0 else { return (series: nil, last: 0) }
+        var fibArr: [Int] = [1, 1]
+        
+        for index in 2 ..< number{
+            fibArr.append(fibArr[index - 1] + fibArr[index - 2])
+        }
+        return (series: fibArr, last: fibArr.last)
+    }
 }
 
 struct ArrayStack<Element> {
