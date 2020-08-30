@@ -75,6 +75,9 @@ class ViewController: UIViewController {
         
         self.invertStarTriangleOf(number: 10)
         self.starTriangleOf(number: 10)
+        
+        if self.isPalindrom(value: "121212121") { print("Palindrom")}
+        else{ print("Not a Palindrom")}
     }
     
     private func resursionCheck(){

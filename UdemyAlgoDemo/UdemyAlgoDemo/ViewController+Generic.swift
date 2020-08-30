@@ -54,7 +54,35 @@ extension ViewController{
         }
         
     }
+  
+    func isPalindrom(value: String) -> Bool {
+        let input = value
+        guard input.count > 1 else { return false }
+        let array = Array(input)
+        var i = 0
+        var j = array.count - 1
+        while i <= j {
+            if array[i] != array[j] { return false }
+            i = i + 1
+            j = j - 1
+        }
+       return true
+    }
     
+    func checkPalindrom(value: String) -> Bool{
+        let len = value.count / 2
+
+        for i in 0..<len {
+            let start = value.index(value.startIndex, offsetBy: i)
+            let end = value.index(value.endIndex, offsetBy: (i * -1) - 1)
+
+            if value[start] != value[end] {
+                return false
+            }
+        }
+
+        return true
+    }
     
 }
 
