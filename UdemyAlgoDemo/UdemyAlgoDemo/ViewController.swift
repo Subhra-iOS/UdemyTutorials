@@ -81,6 +81,9 @@ class ViewController: UIViewController {
         
         print("\(String(describing: self.getFibonnaciSeriesOf(number: 10).series))")
         print("\(String(describing: self.getFibonnaciSeriesOf(number: 10).last))")
+        
+        let oddItem = self.findElementOfOddOccuranceFor(array: [1,4,6,4,1])
+        print("\(String(describing: oddItem))")
     }
     
     private func resursionCheck(){
@@ -117,3 +120,12 @@ struct SimpleStruct: Hashable {
 }
 
 
+ //Operator overloading
+//    static func + (left: [Int], right: [Int]) -> [Int] { // 1
+//         var sum = [Int]() // 2
+//         assert(left.count == right.count, "vector of same length only")  // 3
+//         for (index , _) in left.enumerated() {
+//           sum.append((left[index] + right[index])) // 4
+//         }
+//         return sum
+//     }
