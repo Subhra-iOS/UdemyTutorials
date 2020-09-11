@@ -29,8 +29,18 @@ extension ViewController{
         }else{
             return nil
         }
-        
-        
     }
     
+    func reverseInput(array: [Int]) -> [Int]{
+        var minLimit = 0
+        var maxLimit = array.count - 1
+        var tempArr: [Int] = array
+        
+        while minLimit <= maxLimit {
+            tempArr.swapAt(minLimit, maxLimit)
+            minLimit = minLimit + 1
+            maxLimit = maxLimit - 1
+        }
+        return tempArr
+    }
 }

@@ -9,8 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +81,10 @@ class ViewController: UIViewController {
         print("\(String(describing: self.getFibonnaciSeriesOf(number: 10).last))")
         
         let oddItem = self.findElementOfOddOccuranceFor(array: [1,4,6,4,1])
-        print("\(String(describing: oddItem))")
+        print("Odd occurance : \(String(describing: oddItem))")
+        
+        let reverseItems = self.reverseInput(array: [0,1,2,3,4,5,6,7])
+        print("Reverse Array: \(reverseItems)")
     }
     
     private func resursionCheck(){
