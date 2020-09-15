@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    public private(set) var person: ThreadSafePerson = ThreadSafePerson(_firstname: "Subhra", _lastname: "Roy")
+    public  let workerQueue: DispatchQueue = DispatchQueue(label: "com.demo.workerQueue", attributes: .concurrent)
+    public  let workerGroup: DispatchGroup = DispatchGroup()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        // self.constantTimeComplexity()
@@ -85,6 +90,16 @@ class ViewController: UIViewController {
         
         let reverseItems = self.reverseInput(array: [0,1,2,3,4,5,6,7])
         print("Reverse Array: \(reverseItems)")
+        
+        let seriesOfName: [NameModel] = [NameModel(firstname: "Subhra", lastname: "Das"),
+                                                 NameModel(firstname: "Subhra", lastname: "Murkerjee"),
+                                                 NameModel(firstname: "Subhra", lastname: "Joe"),
+                                                 NameModel(firstname: "Subhra", lastname: "Sen"),]
+        
+        self.threadSafeIterrationWith(names: seriesOfName)
+        self.workerGroup.notify(queue: DispatchQueue.global()) {
+            print("Person New Name after all task is over: \(self.person.fullName ?? "")")
+        }
     }
     
     private func resursionCheck(){
