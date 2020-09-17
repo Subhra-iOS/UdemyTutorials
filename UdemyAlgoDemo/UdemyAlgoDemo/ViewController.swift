@@ -100,6 +100,10 @@ class ViewController: UIViewController {
         self.workerGroup.notify(queue: DispatchQueue.global()) {
             print("Person New Name after all task is over: \(self.person.fullName ?? "")")
         }
+        
+       
+       // self.transcationRaceConditions()
+        self.resolveTranscationRaceConditions()
     }
     
     private func resursionCheck(){

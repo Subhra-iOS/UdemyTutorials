@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0FA9F22513B97F00A3F479 /* ViewController+RaceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FA9F12513B97F00A3F479 /* ViewController+RaceCondition.swift */; };
 		2A61E3B824F1480A005F9CBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E3B724F1480A005F9CBD /* AppDelegate.swift */; };
 		2A61E3BA24F1480A005F9CBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E3B924F1480A005F9CBD /* SceneDelegate.swift */; };
 		2A61E3BC24F1480A005F9CBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E3BB24F1480A005F9CBD /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0FA9F12513B97F00A3F479 /* ViewController+RaceCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+RaceCondition.swift"; sourceTree = "<group>"; };
 		2A61E3B424F14809005F9CBD /* UdemyAlgoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UdemyAlgoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A61E3B724F1480A005F9CBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A61E3B924F1480A005F9CBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				2A7213FC24F930920095CC34 /* ViewController+Generic.swift */,
 				2AFF2E60250A6E0A0072E024 /* ViewController+Logic.swift */,
 				2A99A6CC2510F6C000795940 /* ViewController+ThreadSafe.swift */,
+				2A0FA9F12513B97F00A3F479 /* ViewController+RaceCondition.swift */,
 				2A61E3BD24F1480A005F9CBD /* Main.storyboard */,
 				2A61E3C024F1480D005F9CBD /* Assets.xcassets */,
 				2A61E3C224F1480D005F9CBD /* LaunchScreen.storyboard */,
@@ -229,6 +232,7 @@
 				2A7213FD24F930920095CC34 /* ViewController+Generic.swift in Sources */,
 				2A61E3DC24F17B70005F9CBD /* ViewController+Recursion.swift in Sources */,
 				2A61E3DA24F15403005F9CBD /* ViewController+BigONotation.swift in Sources */,
+				2A0FA9F22513B97F00A3F479 /* ViewController+RaceCondition.swift in Sources */,
 				2A61E3B824F1480A005F9CBD /* AppDelegate.swift in Sources */,
 				2AFF2E61250A6E0A0072E024 /* ViewController+Logic.swift in Sources */,
 				2A61E3BA24F1480A005F9CBD /* SceneDelegate.swift in Sources */,
