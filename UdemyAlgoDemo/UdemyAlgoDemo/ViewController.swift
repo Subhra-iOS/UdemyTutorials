@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     public  let workerQueue: DispatchQueue = DispatchQueue(label: "com.demo.workerQueue", attributes: .concurrent)
     public  let workerGroup: DispatchGroup = DispatchGroup()
     
+    public  let atmQueue: DispatchQueue = DispatchQueue(label: "com.demo.atmQueue", attributes: .concurrent)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,8 +104,8 @@ class ViewController: UIViewController {
         }
         
        
-       // self.transcationRaceConditions()
-        self.resolveTranscationRaceConditions()
+          self.createTranscationRaceConditions()
+       // self.resolveTranscationRaceConditions()
     }
     
     private func resursionCheck(){
