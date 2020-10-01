@@ -17,6 +17,7 @@
 		2A61E3CF24F1480D005F9CBD /* UdemyAlgoDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E3CE24F1480D005F9CBD /* UdemyAlgoDemoTests.swift */; };
 		2A61E3DA24F15403005F9CBD /* ViewController+BigONotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E3D924F15403005F9CBD /* ViewController+BigONotation.swift */; };
 		2A61E3DC24F17B70005F9CBD /* ViewController+Recursion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61E3DB24F17B70005F9CBD /* ViewController+Recursion.swift */; };
+		2A65008A252608FC00D3AAB6 /* ViewController+PropertyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A650089252608FC00D3AAB6 /* ViewController+PropertyObserver.swift */; };
 		2A68FB2924F67B28008F12DC /* ViewController+Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A68FB2824F67B28008F12DC /* ViewController+Sorting.swift */; };
 		2A7213FD24F930920095CC34 /* ViewController+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7213FC24F930920095CC34 /* ViewController+Generic.swift */; };
 		2A7A6E9124F814EC00FBA8EF /* ViewController+PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6E9024F814EC00FBA8EF /* ViewController+PropertyWrapper.swift */; };
@@ -50,6 +51,7 @@
 		2A61E3D024F1480D005F9CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A61E3D924F15403005F9CBD /* ViewController+BigONotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+BigONotation.swift"; sourceTree = "<group>"; };
 		2A61E3DB24F17B70005F9CBD /* ViewController+Recursion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Recursion.swift"; sourceTree = "<group>"; };
+		2A650089252608FC00D3AAB6 /* ViewController+PropertyObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+PropertyObserver.swift"; sourceTree = "<group>"; };
 		2A68FB2824F67B28008F12DC /* ViewController+Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Sorting.swift"; sourceTree = "<group>"; };
 		2A7213FC24F930920095CC34 /* ViewController+Generic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Generic.swift"; sourceTree = "<group>"; };
 		2A7A6E9024F814EC00FBA8EF /* ViewController+PropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+PropertyWrapper.swift"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				2AFF2E60250A6E0A0072E024 /* ViewController+Logic.swift */,
 				2A99A6CC2510F6C000795940 /* ViewController+ThreadSafe.swift */,
 				2A0FA9F12513B97F00A3F479 /* ViewController+RaceCondition.swift */,
+				2A650089252608FC00D3AAB6 /* ViewController+PropertyObserver.swift */,
 				2A61E3BD24F1480A005F9CBD /* Main.storyboard */,
 				2A61E3C024F1480D005F9CBD /* Assets.xcassets */,
 				2A61E3C224F1480D005F9CBD /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 				2A61E3DA24F15403005F9CBD /* ViewController+BigONotation.swift in Sources */,
 				2A0FA9F22513B97F00A3F479 /* ViewController+RaceCondition.swift in Sources */,
 				2A61E3B824F1480A005F9CBD /* AppDelegate.swift in Sources */,
+				2A65008A252608FC00D3AAB6 /* ViewController+PropertyObserver.swift in Sources */,
 				2AFF2E61250A6E0A0072E024 /* ViewController+Logic.swift in Sources */,
 				2A61E3BA24F1480A005F9CBD /* SceneDelegate.swift in Sources */,
 				2ACC96CE24F2D304006C9E4A /* ViewController+PairMatching.swift in Sources */,

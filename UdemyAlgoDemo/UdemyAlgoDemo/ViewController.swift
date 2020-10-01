@@ -106,6 +106,8 @@ class ViewController: UIViewController {
        
           self.createTranscationRaceConditions()
        // self.resolveTranscationRaceConditions()
+        
+        self.checkPropertyObserver()
     }
     
     private func resursionCheck(){
