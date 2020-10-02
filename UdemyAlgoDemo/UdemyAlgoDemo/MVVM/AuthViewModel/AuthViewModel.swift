@@ -12,18 +12,17 @@ import UIKit
 let minCharacterExpose = 4
 
 struct AuthViewModel {
-    private var  user: AuthUsreModel = AuthUsreModel() {
+    
+    //MARK:------Access User name and password----------//
+    var userName: GenericListener<String> = GenericListener(newValue: "")
+    var password: GenericListener<String> = GenericListener(newValue: "")
+    
+    private var  user: AuthUsreModel {
         didSet{
             userName.value = user.userName
+            password.value = user.password
         }
     }
-    
-    var userName: GenericListener<String> = GenericListener(newValue: "")
-    
-    var password: String{
-        return user.password
-    }
-    
     var protectedUserName: String {
         
         let characters = Array(userName.value)
@@ -47,4 +46,9 @@ struct AuthViewModel {
    mutating func setPassword(pass: String){
         user.password = pass
     }
+    
+    init(user: AuthUsreModel) {
+        self.user = user
+    }
+    
 }
