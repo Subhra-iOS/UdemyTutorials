@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
  
-let minCharacterExpose = 4
+let minCharacterExpose = 6
 
-struct AuthViewModel {
+class AuthViewModel {
     
     //MARK:------Access User name and password----------//
     var userName: GenericListener<String> = GenericListener(newValue: "")
@@ -23,6 +23,7 @@ struct AuthViewModel {
             password.value = user.password
         }
     }
+    
     var protectedUserName: String {
         
         let characters = Array(userName.value)
@@ -40,15 +41,19 @@ struct AuthViewModel {
         return  String(newCharacters)
     }
     
-    mutating func setUserName(name: String){
+  func setUserName(name: String){
         user.userName = name
     }
-   mutating func setPassword(pass: String){
+   func setPassword(pass: String){
         user.password = pass
     }
     
     init(user: AuthUsreModel) {
         self.user = user
+    }
+    
+    deinit {
+        print("AuthViewModel  dealloc")
     }
     
 }
