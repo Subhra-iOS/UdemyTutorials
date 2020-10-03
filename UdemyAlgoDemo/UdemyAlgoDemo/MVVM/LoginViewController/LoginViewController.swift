@@ -29,6 +29,18 @@ class LoginViewController: UIViewController{
         }
     }
     
+    @IBAction func textFieldEditingDidChange(_ sender: UITextField) {
+        
+        let textField: UITextField = sender
+        switch textField {
+            case txtUserName:
+                self.authViewModel?.setUserName(name: textField.text ?? "")
+            case txtPassword:
+                self.authViewModel?.setPassword(pass: textField.text ?? "")
+            default: break
+        }
+    }
+    
     
 }
 
@@ -53,21 +65,6 @@ extension LoginViewController: UITextFieldDelegate{
                 textField.text  = self.authViewModel?.password.value
             default: break
         }
-    }
-
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        switch textField {
-            case txtUserName:
-                let newString = (self.txtUserName.text! as NSString).replacingCharacters(in: range, with: string)
-                self.authViewModel?.setUserName(name: newString)
-            case txtPassword:
-                let newString = (self.txtPassword.text! as NSString).replacingCharacters(in: range, with: string)
-                self.authViewModel?.setPassword(pass: newString)
-            default: break
-        }
-        
-        return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -79,6 +79,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 <connections>
+                                    <action selector="textFieldEditingDidChange:" destination="xGp-ie-SPh" eventType="editingChanged" id="5YO-lD-Npf"/>
                                     <outlet property="delegate" destination="xGp-ie-SPh" id="SKX-OP-3Rb"/>
                                 </connections>
                             </textField>
@@ -91,6 +92,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                                 <connections>
+                                    <action selector="textFieldEditingDidChange:" destination="xGp-ie-SPh" eventType="editingChanged" id="JsU-Ia-ih5"/>
                                     <outlet property="delegate" destination="xGp-ie-SPh" id="4sR-4n-Dew"/>
                                 </connections>
                             </textField>
