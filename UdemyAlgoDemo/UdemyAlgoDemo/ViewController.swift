@@ -120,6 +120,7 @@ class ViewController: UIViewController {
        // self.resolveTranscationRaceConditions()
         
         self.checkPropertyObserver()
+        self.checkThreadSafeSingleton()
     }
     
     private func resursionCheck(){

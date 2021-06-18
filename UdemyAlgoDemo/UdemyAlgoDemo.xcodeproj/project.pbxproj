@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A03F020267CAC6900B8AF9A /* ThreadSafeSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03F01F267CAC6900B8AF9A /* ThreadSafeSingleton.swift */; };
+		2A03F026267CB08B00B8AF9A /* ViewController+ThreadSafeSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03F025267CB08B00B8AF9A /* ViewController+ThreadSafeSingleton.swift */; };
 		2A0FA9F22513B97F00A3F479 /* ViewController+RaceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FA9F12513B97F00A3F479 /* ViewController+RaceCondition.swift */; };
 		2A6059FA252753E30065E302 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6059F9252753E30065E302 /* LoginViewController.swift */; };
 		2A605A01252758B00065E302 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A605A00252758B00065E302 /* AuthViewModel.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A03F01F267CAC6900B8AF9A /* ThreadSafeSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeSingleton.swift; sourceTree = "<group>"; };
+		2A03F025267CB08B00B8AF9A /* ViewController+ThreadSafeSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ThreadSafeSingleton.swift"; sourceTree = "<group>"; };
 		2A0FA9F12513B97F00A3F479 /* ViewController+RaceCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+RaceCondition.swift"; sourceTree = "<group>"; };
 		2A6059F9252753E30065E302 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2A605A00252758B00065E302 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A03F01E267CAC3800B8AF9A /* ThreadSafeSingleton */ = {
+			isa = PBXGroup;
+			children = (
+				2A03F01F267CAC6900B8AF9A /* ThreadSafeSingleton.swift */,
+			);
+			path = ThreadSafeSingleton;
+			sourceTree = "<group>";
+		};
 		2A6059F7252753B30065E302 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,10 +162,12 @@
 		2A61E3B624F1480A005F9CBD /* UdemyAlgoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2A03F01E267CAC3800B8AF9A /* ThreadSafeSingleton */,
 				2A6059F7252753B30065E302 /* MVVM */,
 				2A61E3B724F1480A005F9CBD /* AppDelegate.swift */,
 				2A61E3B924F1480A005F9CBD /* SceneDelegate.swift */,
 				2A61E3BB24F1480A005F9CBD /* ViewController.swift */,
+				2A03F025267CB08B00B8AF9A /* ViewController+ThreadSafeSingleton.swift */,
 				2A61E3D924F15403005F9CBD /* ViewController+BigONotation.swift */,
 				2A61E3DB24F17B70005F9CBD /* ViewController+Recursion.swift */,
 				2ACC96CD24F2D304006C9E4A /* ViewController+PairMatching.swift */,
@@ -298,6 +312,8 @@
 				2ACC96CE24F2D304006C9E4A /* ViewController+PairMatching.swift in Sources */,
 				2A605A06252758CF0065E302 /* AuthModel.swift in Sources */,
 				2A68FB2924F67B28008F12DC /* ViewController+Sorting.swift in Sources */,
+				2A03F026267CB08B00B8AF9A /* ViewController+ThreadSafeSingleton.swift in Sources */,
+				2A03F020267CAC6900B8AF9A /* ThreadSafeSingleton.swift in Sources */,
 				2A7A6E9124F814EC00FBA8EF /* ViewController+PropertyWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
