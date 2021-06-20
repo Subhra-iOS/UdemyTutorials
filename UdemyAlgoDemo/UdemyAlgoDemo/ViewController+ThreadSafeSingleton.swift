@@ -28,4 +28,27 @@ extension ViewController {
         
     }
     
+    func longestSubStringWithUnique(characterCount: Int, source: String) -> (maximumLength: Int, result: String){
+        //"abcbbbbcccbdddadacb"
+        var maxLength = 0
+        var lastDuplicateIndex = -1
+        var charaterDict = [Character : Int]()
+        var longestCharArray = [Character]()
+        let charArr = Array(source)
+        for (index, character) in charArr.enumerated(){
+            if let currentIndex = charaterDict[character], lastDuplicateIndex <  currentIndex {
+                lastDuplicateIndex = currentIndex
+                if longestCharArray.contains(character), let _index = longestCharArray.firstIndex(of: character) { longestCharArray.remove(at: _index) }
+            }else{
+                longestCharArray.append(character)
+            }
+            let currentLength = index - lastDuplicateIndex
+            maxLength = max(maxLength, currentLength)
+            charaterDict[character] = index
+        }
+        let output = String(longestCharArray)
+        return (maximumLength: maxLength, result: output)
+    }
+    
+    
 }

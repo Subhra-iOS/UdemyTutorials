@@ -121,6 +121,8 @@ class ViewController: UIViewController {
         
         self.checkPropertyObserver()
         self.checkThreadSafeSingleton()
+        let finalResult = self.longestSubStringWithUnique(characterCount: 2, source: "abcbbbbcccbdddadacb")
+        print("Maximum unique character length: \(finalResult.maximumLength) and String is \(finalResult.result)")
     }
     
     private func resursionCheck(){
