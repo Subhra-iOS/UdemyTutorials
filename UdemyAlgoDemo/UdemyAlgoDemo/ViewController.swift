@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     public  let atmQueue: DispatchQueue = DispatchQueue(label: "com.demo.atmQueue", attributes: .concurrent)
     
+    private  var liskovDelegate: LiskovProtocol?
+    
     
     @IBAction func didMoveToMVVMSection(_ sender: Any) {
         
@@ -123,6 +125,10 @@ class ViewController: UIViewController {
         self.checkThreadSafeSingleton()
         let finalResult = self.longestSubStringWithUnique(characterCount: 2, source: "abcbbbbcccbdddadacb")
         print("Maximum unique character length: \(finalResult.maximumLength) and String is \(finalResult.result)")
+        
+        self.liskovDelegate = NewSubs()
+        self.liskovDelegate?.finish()
+        
     }
     
     private func resursionCheck(){
