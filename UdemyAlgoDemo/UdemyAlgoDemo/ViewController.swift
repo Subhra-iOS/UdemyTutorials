@@ -129,6 +129,9 @@ class ViewController: UIViewController {
         self.liskovDelegate = NewSubs()
         self.liskovDelegate?.finish()
         
+        Transport.carAsTransportCommute()
+        Transport.flightAsTransportCommute()
+        
     }
     
     private func resursionCheck(){
