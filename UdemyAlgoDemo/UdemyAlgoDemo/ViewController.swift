@@ -132,6 +132,10 @@ class ViewController: UIViewController {
         Transport.carAsTransportCommute()
         Transport.flightAsTransportCommute()
         
+        let localCache = LocalCacheHandler()
+        let remoteCache = RemoteDataHandler()
+        let _viewModel = ViewModel(key: "identifier", cacheDBHandler: localCache, remoteHandler: remoteCache)
+        _viewModel.checkForCacheData()
     }
     
     private func resursionCheck(){

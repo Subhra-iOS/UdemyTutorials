@@ -58,6 +58,11 @@ struct ListOfCommute<Element> where Element: Commute {
     mutating func add(item: Element){
         list.append(item)
     }
+    
+    mutating func deleteListRef(){
+        list.removeAll()
+    }
+    
     subscript(index: Int) -> Element?{
         guard index < list.count else { return nil }
         return list[index]
@@ -88,7 +93,7 @@ struct Transport {
         
         list.add(item: indigo)
         list.add(item: airIndia)
-        
+       // list.deleteListRef()
         guard let item: Flight = list[0] else { return }
         print("Brand: \(String(describing: item.brandId))")
         print("Speed: \(String(describing: item.speed))")

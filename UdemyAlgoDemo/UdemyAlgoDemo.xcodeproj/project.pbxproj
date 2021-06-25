@@ -30,6 +30,7 @@
 		2A7A6E9124F814EC00FBA8EF /* ViewController+PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6E9024F814EC00FBA8EF /* ViewController+PropertyWrapper.swift */; };
 		2A99A6CD2510F6C000795940 /* ViewController+ThreadSafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99A6CC2510F6C000795940 /* ViewController+ThreadSafe.swift */; };
 		2A9EFC7E2685A8BE0015DA91 /* GenericClassOrStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EFC7D2685A8BE0015DA91 /* GenericClassOrStruct.swift */; };
+		2A9EFC842685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EFC832685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift */; };
 		2ACC96CE24F2D304006C9E4A /* ViewController+PairMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC96CD24F2D304006C9E4A /* ViewController+PairMatching.swift */; };
 		2AFF2E61250A6E0A0072E024 /* ViewController+Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF2E60250A6E0A0072E024 /* ViewController+Logic.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		2A7A6E9024F814EC00FBA8EF /* ViewController+PropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+PropertyWrapper.swift"; sourceTree = "<group>"; };
 		2A99A6CC2510F6C000795940 /* ViewController+ThreadSafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ThreadSafe.swift"; sourceTree = "<group>"; };
 		2A9EFC7D2685A8BE0015DA91 /* GenericClassOrStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericClassOrStruct.swift; sourceTree = "<group>"; };
+		2A9EFC832685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCacheRemoteWorkFlow.swift; sourceTree = "<group>"; };
 		2ACC96CD24F2D304006C9E4A /* ViewController+PairMatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+PairMatching.swift"; sourceTree = "<group>"; };
 		2AFF2E60250A6E0A0072E024 /* ViewController+Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Logic.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				2A9EFC7D2685A8BE0015DA91 /* GenericClassOrStruct.swift */,
+				2A9EFC832685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift */,
 			);
 			path = GenericInSwift;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				2ACC96CE24F2D304006C9E4A /* ViewController+PairMatching.swift in Sources */,
 				2A605A06252758CF0065E302 /* AuthModel.swift in Sources */,
 				2A68FB2924F67B28008F12DC /* ViewController+Sorting.swift in Sources */,
+				2A9EFC842685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift in Sources */,
 				2A03F026267CB08B00B8AF9A /* ViewController+ThreadSafeSingleton.swift in Sources */,
 				2A03F020267CAC6900B8AF9A /* ThreadSafeSingleton.swift in Sources */,
 				2A7A6E9124F814EC00FBA8EF /* ViewController+PropertyWrapper.swift in Sources */,
