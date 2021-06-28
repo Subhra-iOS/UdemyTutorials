@@ -10,8 +10,9 @@ import UIKit
 import Combine
 
 class ListTableViewCell: UITableViewCell {
-
+    
     private(set) var publisher = PassthroughSubject<String, Never>()
+    
     var listCellModel: ListCellViewModel?{
         didSet{
             self.textLabel?.text = listCellModel?.title
@@ -23,7 +24,7 @@ class ListTableViewCell: UITableViewCell {
         // Initialization code
       
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

@@ -27,20 +27,21 @@ class ListViewController: UIViewController {
         self.tableView.dataSource = self
         
         listViewModel.fetchServiceData()
-            .receive(on: DispatchQueue.main)
-        .sink(receiveCompletion: { (completion) in
-            switch completion {
-                case .finished: print("End of operation")
-                case .failure( let error): print("\(error)")
-            }
-        }, receiveValue: { [weak self] value in
-            self?.companies = self?.listViewModel.convertCellViewModel(value)
-            self?.tableView.reloadData()
-        }).store(in: &obaservers)
+                        .receive(on: DispatchQueue.main)
+                        .sink(receiveCompletion: { (completion) in
+                            switch completion {
+                                case .finished: print("End of operation")
+                                case .failure( let error): print("\(error)")
+                            }
+                        }, receiveValue: { [weak self] value in
+                            self?.companies = self?.listViewModel.convertCellViewModel(value)
+                            self?.tableView.reloadData()
+                        }).store(in: &obaservers)
     }
     
     deinit {
         obaservers.removeAll()
+        print("ListViewController  deinit")
     }
 
 }
@@ -53,18 +54,18 @@ extension ListViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let listCell: ListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-          as? ListTableViewCell{
-            if let array = self.companies, array.count > 0{
-                listCell.listCellModel = array[indexPath.row]
-                listCell.publisher.sink { (name) in
-                    print("Company name is : \(name)")
-                }.store(in: &obaservers)
-            }
-            return listCell
-        }else{
-            return UITableViewCell()
+        guard let listCell: ListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+          as? ListTableViewCell,
+          let array = self.companies else {
+           fatalError()
         }
+        if array.count > 0{
+            listCell.listCellModel = array[indexPath.row]
+            listCell.publisher.sink { (name) in
+                print("Company name is : \(name)")
+            }.store(in: &obaservers)
+        }
+        return listCell
     }
 }
 
