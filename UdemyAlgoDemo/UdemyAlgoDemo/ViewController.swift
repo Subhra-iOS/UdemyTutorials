@@ -30,6 +30,14 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func didTapOnCombine(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let combineVC: ListViewController = storyBoard.instantiateViewController(identifier: "combineVCIdentifier")
+            as? ListViewController {
+            self.navigationController?.pushViewController(combineVC, animated: true)
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
