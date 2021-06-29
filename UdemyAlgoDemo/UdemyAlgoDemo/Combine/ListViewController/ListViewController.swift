@@ -27,16 +27,16 @@ class ListViewController: UIViewController {
         self.tableView.dataSource = self
         
         listViewModel.fetchServiceData()
-                        .receive(on: DispatchQueue.main)
-                        .sink(receiveCompletion: { (completion) in
-                            switch completion {
-                                case .finished: print("End of operation")
-                                case .failure( let error): print("\(error)")
-                            }
-                        }, receiveValue: { [weak self] value in
-                            self?.companies = self?.listViewModel.convertCellViewModel(value)
-                            self?.tableView.reloadData()
-                        }).store(in: &obaservers)
+        .receive(on: DispatchQueue.main)
+        .sink(receiveCompletion: { (completion) in
+            switch completion {
+                case .finished: print("End of operation")
+                case .failure( let error): print("\(error)")
+            }
+        }, receiveValue: { [weak self] value in
+            self?.companies = self?.listViewModel.convertCellViewModel(value)
+            self?.tableView.reloadData()
+        }).store(in: &obaservers)
     }
     
     deinit {
