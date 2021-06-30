@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Combine
 
 class ViewController: UIViewController {
     
     public private(set) var person: ThreadSafePerson = ThreadSafePerson(_firstname: "Subhra", _lastname: "Roy")
     public  let workerQueue: DispatchQueue = DispatchQueue(label: "com.demo.workerQueue", attributes: .concurrent)
     public  let workerGroup: DispatchGroup = DispatchGroup()
+    private var cancellable = Set<AnyCancellable>()
     
     public  let atmQueue: DispatchQueue = DispatchQueue(label: "com.demo.atmQueue", attributes: .concurrent)
     
@@ -144,6 +146,13 @@ class ViewController: UIViewController {
         let remoteCache = RemoteDataHandler()
         let _viewModel = ViewModel(key: "identifier", cacheDBHandler: localCache, remoteHandler: remoteCache)
         _viewModel.checkForCacheData()
+        
+        let car = PoloGT()
+        car.$kwInBettery.sink { (value) in
+            print("Battery status: \(value)")
+        }.store(in: &cancellable)
+        car.drive(kilometer: 100)
+        car.drive(kilometer: 50)
     }
     
     private func resursionCheck(){
@@ -153,7 +162,10 @@ class ViewController: UIViewController {
         self.findRecursiveElementWith(node: node1)
     }
 
-  
+    deinit {
+        print("ViewController deinit")
+        cancellable.removeAll()
+    }
 
 }
 
