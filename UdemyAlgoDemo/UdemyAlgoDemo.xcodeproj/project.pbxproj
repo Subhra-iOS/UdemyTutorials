@@ -32,6 +32,7 @@
 		2A69EC892680D17900A00390 /* SubstituteClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A69EC882680D17900A00390 /* SubstituteClass.swift */; };
 		2A7213FD24F930920095CC34 /* ViewController+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7213FC24F930920095CC34 /* ViewController+Generic.swift */; };
 		2A7A6E9124F814EC00FBA8EF /* ViewController+PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6E9024F814EC00FBA8EF /* ViewController+PropertyWrapper.swift */; };
+		2A7F958E268C2A540004D910 /* GenericJsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F958D268C2A540004D910 /* GenericJsonDecoder.swift */; };
 		2A99A6CD2510F6C000795940 /* ViewController+ThreadSafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99A6CC2510F6C000795940 /* ViewController+ThreadSafe.swift */; };
 		2A9EFC7E2685A8BE0015DA91 /* GenericClassOrStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EFC7D2685A8BE0015DA91 /* GenericClassOrStruct.swift */; };
 		2A9EFC842685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EFC832685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift */; };
@@ -79,6 +80,7 @@
 		2A69EC882680D17900A00390 /* SubstituteClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubstituteClass.swift; sourceTree = "<group>"; };
 		2A7213FC24F930920095CC34 /* ViewController+Generic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Generic.swift"; sourceTree = "<group>"; };
 		2A7A6E9024F814EC00FBA8EF /* ViewController+PropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+PropertyWrapper.swift"; sourceTree = "<group>"; };
+		2A7F958D268C2A540004D910 /* GenericJsonDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericJsonDecoder.swift; sourceTree = "<group>"; };
 		2A99A6CC2510F6C000795940 /* ViewController+ThreadSafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ThreadSafe.swift"; sourceTree = "<group>"; };
 		2A9EFC7D2685A8BE0015DA91 /* GenericClassOrStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericClassOrStruct.swift; sourceTree = "<group>"; };
 		2A9EFC832685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCacheRemoteWorkFlow.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		2A61E3B624F1480A005F9CBD /* UdemyAlgoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2A7F958C268C2A540004D910 /* GenericJsonDecoder */,
 				2A66DF6F268A058B00F708B8 /* Combine */,
 				2A9EFC7C2685A8850015DA91 /* GenericInSwift */,
 				2A69EC872680D15100A00390 /* LiskonSubsPrinciple */,
@@ -261,6 +264,14 @@
 				2A69EC882680D17900A00390 /* SubstituteClass.swift */,
 			);
 			path = LiskonSubsPrinciple;
+			sourceTree = "<group>";
+		};
+		2A7F958C268C2A540004D910 /* GenericJsonDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				2A7F958D268C2A540004D910 /* GenericJsonDecoder.swift */,
+			);
+			path = GenericJsonDecoder;
 			sourceTree = "<group>";
 		};
 		2A9EFC7C2685A8850015DA91 /* GenericInSwift */ = {
@@ -373,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7F958E268C2A540004D910 /* GenericJsonDecoder.swift in Sources */,
 				2A6059FA252753E30065E302 /* LoginViewController.swift in Sources */,
 				2A99A6CD2510F6C000795940 /* ViewController+ThreadSafe.swift in Sources */,
 				2A66DF80268A070400F708B8 /* APIHandler.swift in Sources */,
