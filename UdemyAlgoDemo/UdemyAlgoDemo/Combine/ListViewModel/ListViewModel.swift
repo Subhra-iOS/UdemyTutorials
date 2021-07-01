@@ -13,7 +13,7 @@ struct ListCellViewModel {
     let title: String
 }
 
-struct ListViewModel {
+class ListViewModel {
     private let apiHandler: APIHandler
     init(api: APIHandler) {
         self.apiHandler = api
@@ -27,5 +27,9 @@ struct ListViewModel {
         return companies.map { (name) -> ListCellViewModel in
             return ListCellViewModel(title: name)
         }
+    }
+    
+    deinit {
+        print("ListViewModel  deinit")
     }
 }

@@ -20,10 +20,13 @@ enum RemoteResponse<T, ServiceError>{
 }
 
 class APIHandler {
-    static let shared = APIHandler()
-    private init(){ }
+    static let shared = APIHandler(networkManager: NetworkManager(network: Networker()))
+    private var networkManager: NetworkManager
+    private init(networkManager: NetworkManager){
+        self.networkManager = networkManager
+    }
     
-    func fetchRemoteCompanies() -> Future<[String], ServiceError>{
+   func fetchRemoteCompanies() -> Future<[String], ServiceError>{
         return Future{ promise in
             ServiceManager.fetchDataFromBackendOn { (result) in
                 switch result{
@@ -33,6 +36,11 @@ class APIHandler {
             }
         }
     }
+    
+   /* // Check for URL call
+     func fetchRemoteCompanies() -> Future<[String], ServiceError>{
+        return self.networkManager.fetchDataFromBackendOn()
+    }*/
 }
 
 struct ServiceManager {
