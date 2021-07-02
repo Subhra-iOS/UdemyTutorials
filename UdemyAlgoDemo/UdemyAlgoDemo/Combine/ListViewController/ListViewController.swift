@@ -10,7 +10,7 @@ import UIKit
 import Combine
 
 class ListViewController: UIViewController {
-    private let listViewModel: ListViewModel = ListViewModel(api: APIHandler.shared)
+    private var listViewModel: ListViewModel!
     private var obaservers: [AnyCancellable] = [AnyCancellable]()
     private var companies: [ListCellViewModel]?
     
@@ -20,12 +20,17 @@ class ListViewController: UIViewController {
         return table
     }()
     
+    private func initViewModel(){
+        let _networkManager = NetworkManager(network: Networker(), cancelable: Set<AnyCancellable>())
+        listViewModel = ListViewModel(api: APIHandler(networkManager: _networkManager))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.tableView)
         self.tableView.frame = view.bounds
         self.tableView.dataSource = self
-        
+        self.initViewModel()
         listViewModel.fetchServiceData()
         .receive(on: DispatchQueue.main)
         .sink(receiveCompletion: { (completion) in

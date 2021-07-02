@@ -20,9 +20,9 @@ enum RemoteResponse<T, ServiceError>{
 }
 
 class APIHandler {
-    static let shared = APIHandler(networkManager: NetworkManager(network: Networker()))
+    //static let shared = APIHandler(networkManager: NetworkManager(network: Networker(), cancelable: Set<AnyCancellable>()))
     private var networkManager: NetworkManager
-    private init(networkManager: NetworkManager){
+    init(networkManager: NetworkManager){
         self.networkManager = networkManager
     }
     
@@ -37,16 +37,20 @@ class APIHandler {
         }
     }
     
-   /* // Check for URL call
-     func fetchRemoteCompanies() -> Future<[String], ServiceError>{
+    // Check for URL call
+   /*  func fetchRemoteCompanies() -> Future<[String], ServiceError>{
         return self.networkManager.fetchDataFromBackendOn()
     }*/
+    
+    deinit {
+        print("APIHandler deinit")
+    }
 }
 
 struct ServiceManager {
     static func fetchDataFromBackendOn(complete: @escaping (RemoteResponse<[String]?, ServiceError>) -> Void){
         DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 3){
-            complete(.output(["Apple", "Google", "Mocrosoft", "Facebook"]))
+            complete(.output(["Apple", "Google", "Mocrosoft", "Facebook", "Amazon"]))
             //complete(.fail(.none))
         }
     }

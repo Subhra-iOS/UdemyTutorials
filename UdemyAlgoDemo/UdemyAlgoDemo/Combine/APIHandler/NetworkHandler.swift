@@ -39,10 +39,11 @@ struct Networker: NetworkProtocol{
 final class NetworkManager {
     
     private let network: NetworkProtocol
-    private var cancelable = Set<AnyCancellable>()
+    private var cancelable: Set<AnyCancellable>
     
-    init(network: NetworkProtocol = Networker()) {
+    init(network: NetworkProtocol = Networker(), cancelable: Set<AnyCancellable> = Set<AnyCancellable>()) {
         self.network = network
+        self.cancelable = cancelable
     }
     
     func fetchDataFromBackendOn() -> Future<[String], ServiceError>{
@@ -57,7 +58,7 @@ final class NetworkManager {
                         case .finished: print("End of service call")
                         case .failure(let error): print("Error occurs: \(error.localizedDescription)")
                     }
-                } receiveValue: { (model) in
+                } receiveValue: { (models) in
                     promise(.success(["Apple", "Google", "Mocrosoft", "Facebook"]))
                 }.store(in: &weakSelf.cancelable)
         }
