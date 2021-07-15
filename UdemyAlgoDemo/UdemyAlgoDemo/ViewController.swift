@@ -153,6 +153,10 @@ class ViewController: UIViewController {
         }.store(in: &cancellable)
         car.drive(kilometer: 100)
         car.drive(kilometer: 50)
+        
+        let observed = MyObjectToObserve()
+        let observer = MyObserver(object: observed)
+        observed.updateDate()
     }
     
     private func resursionCheck(){

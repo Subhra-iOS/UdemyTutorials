@@ -33,6 +33,7 @@
 		2A703320268DD79A0052CB14 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A70331F268DD79A0052CB14 /* NetworkHandler.swift */; };
 		2A7213FD24F930920095CC34 /* ViewController+Generic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7213FC24F930920095CC34 /* ViewController+Generic.swift */; };
 		2A72AC95268CB8040075CA04 /* CombinePublished.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A72AC94268CB8040075CA04 /* CombinePublished.swift */; };
+		2A72F99926A028D600ACE0CB /* KeyValueObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A72F99826A028D600ACE0CB /* KeyValueObserver.swift */; };
 		2A7A6E9124F814EC00FBA8EF /* ViewController+PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7A6E9024F814EC00FBA8EF /* ViewController+PropertyWrapper.swift */; };
 		2A7F958E268C2A540004D910 /* GenericJsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F958D268C2A540004D910 /* GenericJsonDecoder.swift */; };
 		2A99A6CD2510F6C000795940 /* ViewController+ThreadSafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A99A6CC2510F6C000795940 /* ViewController+ThreadSafe.swift */; };
@@ -85,6 +86,7 @@
 		2A70331F268DD79A0052CB14 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
 		2A7213FC24F930920095CC34 /* ViewController+Generic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Generic.swift"; sourceTree = "<group>"; };
 		2A72AC94268CB8040075CA04 /* CombinePublished.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinePublished.swift; sourceTree = "<group>"; };
+		2A72F99826A028D600ACE0CB /* KeyValueObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueObserver.swift; sourceTree = "<group>"; };
 		2A7A6E9024F814EC00FBA8EF /* ViewController+PropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+PropertyWrapper.swift"; sourceTree = "<group>"; };
 		2A7F958D268C2A540004D910 /* GenericJsonDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericJsonDecoder.swift; sourceTree = "<group>"; };
 		2A99A6CC2510F6C000795940 /* ViewController+ThreadSafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ThreadSafe.swift"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		2A61E3B624F1480A005F9CBD /* UdemyAlgoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2A72F99726A028BE00ACE0CB /* KeyValueObserver */,
 				2AB37A0F269B5AE30065AF9E /* OperartionQueue */,
 				2A7F958C268C2A540004D910 /* GenericJsonDecoder */,
 				2A66DF6F268A058B00F708B8 /* Combine */,
@@ -283,6 +286,14 @@
 				2A72AC94268CB8040075CA04 /* CombinePublished.swift */,
 			);
 			path = PropertyWrapperForCombine;
+			sourceTree = "<group>";
+		};
+		2A72F99726A028BE00ACE0CB /* KeyValueObserver */ = {
+			isa = PBXGroup;
+			children = (
+				2A72F99826A028D600ACE0CB /* KeyValueObserver.swift */,
+			);
+			path = KeyValueObserver;
 			sourceTree = "<group>";
 		};
 		2A7F958C268C2A540004D910 /* GenericJsonDecoder */ = {
@@ -443,6 +454,7 @@
 				2A03F020267CAC6900B8AF9A /* ThreadSafeSingleton.swift in Sources */,
 				2AB37A13269B5AFB0065AF9E /* OperartionQueueManager.swift in Sources */,
 				2A7A6E9124F814EC00FBA8EF /* ViewController+PropertyWrapper.swift in Sources */,
+				2A72F99926A028D600ACE0CB /* KeyValueObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
