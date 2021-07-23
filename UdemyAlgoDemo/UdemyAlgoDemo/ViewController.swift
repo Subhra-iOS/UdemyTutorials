@@ -157,6 +157,12 @@ class ViewController: UIViewController {
         let observed = MyObjectToObserve()
         let observer = MyObserver(object: observed)
         observed.updateDate()
+        //Key-Value Coding
+        let demoClass = DemoClass(first: "Subhra", last: "Roy")
+        print("\( String(describing: demoClass.value(forKey: "firstName")))")
+        print("\( String(describing: demoClass.value(forKey: "lastName")))")
+        demoClass.setValue("Nibedita", forKey: "firstName")
+        print("\( String(describing: demoClass.value(forKey: "firstName")))")
     }
     
     private func resursionCheck(){
