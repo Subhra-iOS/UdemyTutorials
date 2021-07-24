@@ -163,6 +163,15 @@ class ViewController: UIViewController {
         print("\( String(describing: demoClass.value(forKey: "lastName")))")
         demoClass.setValue("Nibedita", forKey: "firstName")
         print("\( String(describing: demoClass.value(forKey: "firstName")))")
+        //Swift5 new features
+        Event.getResultResponseType()
+        Event.flattenNestedOpionalItem()
+        Event.dynamicallyCallable()
+        Event.buildRawString()
+        Event.stringInterpolarion()
+        Event.getMultiplier(of: 10, dividend: 5)
+        Event.getValidEmpDict()
+        
     }
     
     private func resursionCheck(){
