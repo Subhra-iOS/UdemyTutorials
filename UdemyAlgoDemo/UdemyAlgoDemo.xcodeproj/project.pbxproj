@@ -43,6 +43,7 @@
 		2A9EFC842685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9EFC832685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift */; };
 		2AB37A13269B5AFB0065AF9E /* OperartionQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB37A12269B5AFB0065AF9E /* OperartionQueueManager.swift */; };
 		2AB37A7C269B772A0065AF9E /* JobOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB37A7B269B772A0065AF9E /* JobOperation.swift */; };
+		2ACC125226AEE56800B0747E /* InstantiatePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC125126AEE56800B0747E /* InstantiatePool.swift */; };
 		2ACC96CE24F2D304006C9E4A /* ViewController+PairMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACC96CD24F2D304006C9E4A /* ViewController+PairMatching.swift */; };
 		2AFF2E61250A6E0A0072E024 /* ViewController+Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFF2E60250A6E0A0072E024 /* ViewController+Logic.swift */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		2A9EFC832685ED7C0015DA91 /* GenericCacheRemoteWorkFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCacheRemoteWorkFlow.swift; sourceTree = "<group>"; };
 		2AB37A12269B5AFB0065AF9E /* OperartionQueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperartionQueueManager.swift; sourceTree = "<group>"; };
 		2AB37A7B269B772A0065AF9E /* JobOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOperation.swift; sourceTree = "<group>"; };
+		2ACC125126AEE56800B0747E /* InstantiatePool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiatePool.swift; sourceTree = "<group>"; };
 		2ACC96CD24F2D304006C9E4A /* ViewController+PairMatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+PairMatching.swift"; sourceTree = "<group>"; };
 		2AFF2E60250A6E0A0072E024 /* ViewController+Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Logic.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 		2A61E3B624F1480A005F9CBD /* UdemyAlgoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2ACC125026AEE53A00B0747E /* AutorelesePool */,
 				2A70CC1B26ABEEAA0064C286 /* Swift5Features */,
 				2A6E0E2726AAE7D900F92651 /* KayValueCoding */,
 				2A72F99726A028BE00ACE0CB /* KeyValueObserver */,
@@ -344,6 +347,14 @@
 			path = OperartionQueue;
 			sourceTree = "<group>";
 		};
+		2ACC125026AEE53A00B0747E /* AutorelesePool */ = {
+			isa = PBXGroup;
+			children = (
+				2ACC125126AEE56800B0747E /* InstantiatePool.swift */,
+			);
+			path = AutorelesePool;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -466,6 +477,7 @@
 				2A61E3BA24F1480A005F9CBD /* SceneDelegate.swift in Sources */,
 				2A6E0E2926AAE7F000F92651 /* KayValueCoding.swift in Sources */,
 				2A66DF79268A06AD00F708B8 /* ListViewModel.swift in Sources */,
+				2ACC125226AEE56800B0747E /* InstantiatePool.swift in Sources */,
 				2A72AC95268CB8040075CA04 /* CombinePublished.swift in Sources */,
 				2A605A0E25275A200065E302 /* GenericListener.swift in Sources */,
 				2A66DF72268A05B600F708B8 /* ListViewController.swift in Sources */,

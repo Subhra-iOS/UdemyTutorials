@@ -172,6 +172,10 @@ class ViewController: UIViewController {
         Event.getMultiplier(of: 10, dividend: 5)
         Event.getValidEmpDict()
         
+        let pool = Pool()
+        let items : [Item] = pool.getAllObjectsInPool()
+        print("\(items)")
+        
     }
     
     private func resursionCheck(){
