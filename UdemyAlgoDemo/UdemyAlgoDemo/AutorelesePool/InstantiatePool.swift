@@ -42,3 +42,27 @@ class Pool: NSObject{
         }
     }
 }
+
+//**********autoclosure************//
+struct Employee: CustomStringConvertible {
+    
+    var name: String
+    let emp_id: Int
+    
+    init(_name: String, _empId: Int) {
+        self.name = _name
+        self.emp_id = _empId
+    }
+    
+    var description: String{
+        return "Employee Info \(name) and id: \(emp_id)"
+    }
+    
+}
+
+struct DebugLog {
+    static let isDebugEnable: Bool = true
+    static func log(message: @autoclosure () -> String){
+        if isDebugEnable { print("Debug: \(message())") }
+    }
+}

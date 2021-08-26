@@ -190,10 +190,12 @@ class ViewController: UIViewController {
         let p2 = p1
        // p1?.name = "Second"
         p1 = nil
-        print(p1?.name)
-        print(p2?.name)
+       // print(p1?.name)
+        print(p2?.name) //ownership still there for p2
         /**Shallow copies are faster to create because sharing the reference only. The created copies does not entirely create new instance in memory instead only address/reference is copied.*/
         
+        let emp = Employee(_name: "Subhra", _empId: 377)
+        DebugLog.log(message: emp.description)
     }
     
     private func resursionCheck(){
