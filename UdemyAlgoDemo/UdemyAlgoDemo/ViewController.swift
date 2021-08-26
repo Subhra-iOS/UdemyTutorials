@@ -192,7 +192,7 @@ class ViewController: UIViewController {
         p1 = nil
         print(p1?.name)
         print(p2?.name)
-
+        /**Shallow copies are faster to create because sharing the reference only. The created copies does not entirely create new instance in memory instead only address/reference is copied.*/
         
     }
     
