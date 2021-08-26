@@ -9,6 +9,14 @@
 import UIKit
 import Combine
 
+class NewPerson {
+    var name: String
+    init(name _name: String) {
+        name = _name
+    }
+}
+
+
 class ViewController: UIViewController {
     
     public private(set) var person: ThreadSafePerson = ThreadSafePerson(_firstname: "Subhra", _lastname: "Roy")
@@ -175,6 +183,16 @@ class ViewController: UIViewController {
         let pool = Pool()
         let items : [Item] = pool.getAllObjectsInPool()
         print("\(items)")
+        
+       // var p1, p2: NewPerson?
+        var p1: NewPerson?
+        p1 = NewPerson(name: "First")
+        let p2 = p1
+       // p1?.name = "Second"
+        p1 = nil
+        print(p1?.name)
+        print(p2?.name)
+
         
     }
     
