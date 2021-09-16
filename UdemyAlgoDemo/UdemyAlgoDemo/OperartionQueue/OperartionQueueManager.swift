@@ -50,6 +50,18 @@ final class OperartionQueueManager {
         self.operationQueue.addOperation(operation)
     }
     
+    func addBlock(jobs: [JobModel]) -> Void{
+        let blockJobOperation: BlockOperation = BlockOperation()
+        jobs.forEach { (job) in
+            blockJobOperation.addExecutionBlock {
+                let operation: JobOperation = JobOperation(jobId: UUID().uuidString, groupId: UUID().uuidString, opPriority: .high, inProgress: .inprogress, delegate: self)
+                print("Operation adds in block name: \(String(describing: operation.jobIdentifier))")
+                operation.execute()
+            }
+        }
+        self.operationQueue.addOperation(blockJobOperation)
+    }
+    
 }
 
 extension OperartionQueueManager: OperationQueueConfigueProtocol{

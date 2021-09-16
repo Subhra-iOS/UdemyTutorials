@@ -196,6 +196,9 @@ class ViewController: UIViewController {
         
         let emp = Employee(_name: "Subhra", _empId: 377)
         DebugLog.log(message: emp.description)
+        
+        let opManager = OperartionQueueManager(qualityService: .background)
+        opManager.addBlock(jobs: [JobModel(), JobModel(), JobModel(), JobModel(), JobModel()])
     }
     
     private func resursionCheck(){
