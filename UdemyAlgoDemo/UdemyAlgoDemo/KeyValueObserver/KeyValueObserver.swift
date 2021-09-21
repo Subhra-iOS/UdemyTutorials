@@ -11,7 +11,7 @@ import Foundation
 class MyObjectToObserve: NSObject {
     @objc dynamic var myDate = NSDate(timeIntervalSince1970: 0) // 1970
     func updateDate() {
-        myDate = myDate.addingTimeInterval(Double(2 << 30)) // Adds about 68 years.
+        myDate = myDate.addingTimeInterval(Double(2 << 30)) // Adds about 68 years. a << x is equivalent to a * 2^x i.e (2* 2^30)
     }
 }
 

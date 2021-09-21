@@ -189,7 +189,7 @@ class ViewController: UIViewController {
         p1 = NewPerson(name: "First")
         let p2 = p1
        // p1?.name = "Second"
-        p1 = nil
+        p1 = nil //while edit a new copy is generated which is going to nil
        // print(p1?.name)
         print(p2?.name) //ownership still there for p2
         /**Shallow copies are faster to create because sharing the reference only. The created copies does not entirely create new instance in memory instead only address/reference is copied.*/
