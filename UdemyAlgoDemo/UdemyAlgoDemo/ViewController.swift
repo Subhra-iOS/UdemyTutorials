@@ -199,6 +199,9 @@ class ViewController: UIViewController {
         
         let opManager = OperartionQueueManager(qualityService: .background)
         opManager.addBlock(jobs: [JobModel(), JobModel(), JobModel(), JobModel(), JobModel()])
+        
+       let resultArr = self.moveAllZeroUpfrontFor(array: [1,8,6,4,3,0,0,0])
+        print("\(resultArr)")
     }
     
     private func resursionCheck(){
