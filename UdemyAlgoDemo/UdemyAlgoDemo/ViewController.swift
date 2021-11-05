@@ -8,6 +8,7 @@
 
 import UIKit
 import Combine
+import LeetCodeRepo
 
 class NewPerson {
     var name: String
@@ -202,6 +203,8 @@ class ViewController: UIViewController {
         
        let resultArr = self.moveAllZeroUpfrontFor(array: [1,8,6,4,3,0,0,0])
         print("\(resultArr)")
+        
+        self.checkLeetCodePackage()
     }
     
     private func resursionCheck(){
@@ -210,6 +213,13 @@ class ViewController: UIViewController {
         let node1: Node = Node(value: "Node1", node: node2)
         self.findRecursiveElementWith(node: node1)
     }
+    
+    private func checkLeetCodePackage(){
+        let repo = CodeRepo()
+        let result = repo.twoSum([2,7,11,15], 9)
+        print(result)
+    }
+    
 
     deinit {
         print("ViewController deinit")

@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2A03F020267CAC6900B8AF9A /* ThreadSafeSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03F01F267CAC6900B8AF9A /* ThreadSafeSingleton.swift */; };
 		2A03F026267CB08B00B8AF9A /* ViewController+ThreadSafeSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03F025267CB08B00B8AF9A /* ViewController+ThreadSafeSingleton.swift */; };
 		2A0FA9F22513B97F00A3F479 /* ViewController+RaceCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FA9F12513B97F00A3F479 /* ViewController+RaceCondition.swift */; };
+		2A5B3E3B273552FE002A13AC /* LeetCodeRepo in Frameworks */ = {isa = PBXBuildFile; productRef = 2A5B3E3A273552FE002A13AC /* LeetCodeRepo */; };
 		2A6059FA252753E30065E302 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6059F9252753E30065E302 /* LoginViewController.swift */; };
 		2A605A01252758B00065E302 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A605A00252758B00065E302 /* AuthViewModel.swift */; };
 		2A605A06252758CF0065E302 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A605A05252758CF0065E302 /* AuthModel.swift */; };
@@ -113,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5B3E3B273552FE002A13AC /* LeetCodeRepo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +403,9 @@
 			dependencies = (
 			);
 			name = UdemyAlgoDemo;
+			packageProductDependencies = (
+				2A5B3E3A273552FE002A13AC /* LeetCodeRepo */,
+			);
 			productName = UdemyAlgoDemo;
 			productReference = 2A61E3B424F14809005F9CBD /* UdemyAlgoDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -451,6 +456,9 @@
 				Base,
 			);
 			mainGroup = 2A61E3AB24F14809005F9CBD;
+			packageReferences = (
+				2A5B3E39273552FE002A13AC /* XCRemoteSwiftPackageReference "LeetCodeRepo" */,
+			);
 			productRefGroup = 2A61E3B524F14809005F9CBD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -789,6 +797,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A5B3E39273552FE002A13AC /* XCRemoteSwiftPackageReference "LeetCodeRepo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Subhra-iOS/LeetCodeRepo.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A5B3E3A273552FE002A13AC /* LeetCodeRepo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A5B3E39273552FE002A13AC /* XCRemoteSwiftPackageReference "LeetCodeRepo" */;
+			productName = LeetCodeRepo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A61E3AC24F14809005F9CBD /* Project object */;
 }
