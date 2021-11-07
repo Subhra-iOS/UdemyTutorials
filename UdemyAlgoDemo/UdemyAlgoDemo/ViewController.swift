@@ -218,6 +218,10 @@ class ViewController: UIViewController {
         let repo = CodeRepo()
         let result = repo.twoSum([2,7,11,15], 9)
         print(result)
+        
+        let stock = StocksRepo()
+        let stockResult = stock.maxProfit([7,1,5,3,6,4])
+        print("\(stockResult)")
     }
     
 
