@@ -222,6 +222,10 @@ class ViewController: UIViewController {
         let stock = StocksRepo()
         let stockResult = stock.maxProfit([7,1,5,3,6,4])
         print("\(stockResult)")
+        
+        let arrayRepo = ArrayRepo()
+        let subArrSum = arrayRepo.maxSubArray([5,4,-1,7,8])
+        print("\(subArrSum)")
     }
     
 
