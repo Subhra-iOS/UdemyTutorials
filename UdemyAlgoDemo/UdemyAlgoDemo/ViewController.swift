@@ -9,6 +9,7 @@
 import UIKit
 import Combine
 import LeetCodeRepo
+import SubArrayRepo
 
 class NewPerson {
     var name: String
@@ -226,6 +227,10 @@ class ViewController: UIViewController {
         let arrayRepo = ArrayRepo()
         let subArrSum = arrayRepo.maxSubArray([5,4,-1,7,8])
         print("\(subArrSum)")
+        
+        let subArrayRepo = SubArrayRepo()
+        let maxSubArrayProd = subArrayRepo.maxProduct([2,3,-2,4])
+        print("\(maxSubArrayProd)")
     }
     
 
