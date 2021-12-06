@@ -32,6 +32,27 @@ extension ViewController{
         return sum
     }
     
+    func checkFallThrough(index: Int){
+        
+        switch index {
+            case 100 :
+                print( "Value of index is 100")
+                fallthrough
+            case 10,15 :
+                print( "Value of index is either 10 or 15")
+                fallthrough
+            case 5 :
+                print( "Value of index is 5")
+            default :
+                print( "default case")
+        }
+        /**
+         Value of index is 100
+         Value of index is either 10 or 15
+         Value of index is 5
+         */
+    }
+    
 }
 
 class Node{

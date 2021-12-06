@@ -206,6 +206,7 @@ class ViewController: UIViewController {
         print("\(resultArr)")
         
         self.checkLeetCodePackage()
+        self.checkFallThrough(index: 100)
     }
     
     private func resursionCheck(){
