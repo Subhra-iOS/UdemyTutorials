@@ -139,7 +139,20 @@ class ViewController: UIViewController {
         
        
           self.createTranscationRaceConditions()
-       // self.resolveTranscationRaceConditions()
+        /**ATM_First: checking if balance containing sufficent money
+         ATM_First: Balance is sufficent, please wait while processing withdrawal
+         ATM_First: Done: 800.0 has been withdrawed
+         ATM_First: current balance is 200.0
+         ATM_Second: Can't withdraw: insufficent balance*/
+        
+        //  self.resolveTranscationRaceConditions()
+        
+        /**ATM_First: checking if balance containing sufficent money
+         ATM_First: Balance is sufficent, please wait while processing withdrawal
+         ATM_First: Done: 800.0 has been withdrawed
+         ATM_First: current balance is 200.0
+         ATM_Second: checking if balance containing sufficent money
+         ATM_Second: Can't withdraw: insufficent balance*/
         
         self.checkPropertyObserver()
         self.checkThreadSafeSingleton()
